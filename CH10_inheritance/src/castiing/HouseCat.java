@@ -12,4 +12,3 @@ public class HouseCat extends cat {
 		System.out.println("집사를 부릅니다~");}
 	
 	}
-}

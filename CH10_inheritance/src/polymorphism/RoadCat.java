@@ -1,5 +1,5 @@
 package polymorphism;
 
-public class RoadCat extends cat{
+public class RoadCat extends Cat{
 	
 }

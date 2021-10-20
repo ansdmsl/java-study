@@ -1,7 +1,10 @@
 package polymorphism;
 
-public class tiger {
-	public void hunt() {
-		System.out.println("»ç³ÉÁß");	}
+public class Tiger extends Cat {
 
+	@Override
+	public void vocal() {
+		System.out.println("í—ˆì—");
+	}
+	
 }

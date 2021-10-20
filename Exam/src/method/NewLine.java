@@ -2,7 +2,7 @@ package method;
 
 public class NewLine {
 
-	public static void main(String[] args) {
+	
 		System.out.println("라인 1");
 		threeLines();
 		System.out.println("라인 2");

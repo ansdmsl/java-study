@@ -1,6 +1,6 @@
 package polymorphism;
 
-public class cat {
+public class Cat {
 	public void vocal() {
 		System.out.println("¾ß¿Ë");
 	}
