@@ -4,34 +4,32 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-class RedListner implements ActionListener{
 
+class ColorListener implements ActionListener {
+	private MainPanel mainPanel;
+	private Color color;
+	
+	public ColorListener(MainPanel mainPanel, Color color) {
+		this.mainPanel = mainPanel;
+		this.color = color;
+	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		System.out.println("발간커튼 클릭!");
-		
-	}
-} 
+		mainPanel.setBackground(color);
+	}	
+}
 
-class BlueListner implements ActionListener{
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		System.out.println("파란버튼 클릭!");
-		
-	}
-} 
 
 public class Toolbar extends JToolBar {
 	private static final long serialVersionUID = 1L;
 	
-	public Toolbar() {
-	JButton redButton = new JButton("Red");
-	JButton blueButton = new JButton("BLUE");
-	
-	redButton.addActionListener(new RedListner());
-	redButton.addActionListener(new BlueListner());
-	
+	public Toolbar(MainPanel mainPanel) {
+		JButton redButton = new JButton("RED");
+		JButton blueButton = new JButton("BLUE");
+		
+		redButton.addActionListener(new ColorListener(mainPanel, Color.RED));
+		blueButton.addActionListener(new ColorListener(mainPanel, Color.BLUE));
+		
 		add(redButton);
 		add(blueButton);
 	}
