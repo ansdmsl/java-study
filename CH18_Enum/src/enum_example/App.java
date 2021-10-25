@@ -1,5 +1,7 @@
 package enum_example;
 
+import enum_Constructor.Fruit;
+
 public class App {
 
 	public static void main(String[] args) {
