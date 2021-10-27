@@ -12,7 +12,7 @@ import model.World;
 public class GamePanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 
-	private final static int CELLSIZE = 100; //격자의 크리설정 
+	private final static int CELLSIZE = 50; //격자의 크리설정 
  
 	private final static Color backgroundColor = Color.BLACK; // 배경색 검은색
 	
@@ -65,9 +65,11 @@ public class GamePanel extends JPanel {
 		
 		if(world == null) {  // 아직 world가 생성되지 않았으면 새로 생성
 			world = new World(rows, cols);
-			
-		
-		}
+			} else {
+				if(world.getRows() != rows|| world.getColumns()!= cols) {
+					world = new World(rows, cols);
+				}
+			}
 		
 		
 //		System.out.println(rows);
@@ -117,6 +119,22 @@ public class GamePanel extends JPanel {
 			//중을 긋는 메소드 (x1,y1) (x2,y2)
 			g2.drawLine(leftRightMargin, y, width - leftRightMargin, y);
 		}
+	}
+	
+	public void randomize() {
+		world.randomize();
+		repaint();	
+	}
+
+	public void clear() {
+		world.clear();
+		repaint();	
+	}
+
+	public void next() {
+		// TODO Auto-generated method stub
+		world.next();
+		repaint();	
 	}
 		
 	}
