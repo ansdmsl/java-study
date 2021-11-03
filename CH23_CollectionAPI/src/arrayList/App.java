@@ -5,8 +5,8 @@ import java.util.ArrayList;
 public class App {
 
 	public static void main(String[] args) {
-		// 어레이 리스트 
-		ArrayList< Integer > list = new ArrayList<>();
+		// 어레이 리스트
+		ArrayList<Integer> list = new ArrayList<>();
 		
 		//입력
 		list.add(7);
@@ -19,7 +19,7 @@ public class App {
 		System.out.println(list.get(1));
 		System.out.println(list.get(2));
 		System.out.println(list.get(3));
-		
+
 	}
 
 }
