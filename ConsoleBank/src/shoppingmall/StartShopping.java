@@ -1,0 +1,15 @@
+package shoppingmall;
+
+public class StartShopping {
+
+	public static void main(String[] args) {
+		
+		MyShop myshop = new MyShop();
+		
+		myshop.setTitle("11Î≤àÍ?");
+		myshop.genProduct();
+		myshop.setExistingUsers("Ï°∞Ïû¨?ù¨", "Í∂åÌòÅÏ≤?", myshop.existingUsers);
+		myshop.initAlarm();
+	}
+
+}
